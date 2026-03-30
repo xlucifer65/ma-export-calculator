@@ -1,0 +1,82 @@
+rule_id,origin,destination,cost_category,calculation_type,rate,minimum_charge,currency,active_flag,effective_from,effective_to,notes
+R001,UK,*,Liability,percentage,0.50,50.00,GBP,TRUE,2024-01-01,,Standard liability cover 0.5% of declared value
+R002,UK,*,Airline Handling,fixed,95.00,,GBP,TRUE,2024-01-01,,LHR airline handling and acceptance charge
+R003,UK,*,Airport Security,fixed,65.00,,GBP,TRUE,2024-01-01,,LHR security screening fee
+R004,UK,*,Vault Fees,fixed,120.00,,GBP,TRUE,2024-01-01,,Overnight secure vault storage at LHR
+R005,UK,*,X-ray,fixed,45.00,,GBP,TRUE,2024-01-01,,X-ray screening at LHR
+R006,UK,*,Domestic Pickup,fixed,125.00,,GBP,TRUE,2024-01-01,,London area armoured collection
+R007,UK,*,Vehicle,fixed,175.00,,GBP,TRUE,2024-01-01,,Armoured vehicle charge domestic leg
+R008,UK,*,Fuel,fixed,55.00,,GBP,TRUE,2024-01-01,,Fuel surcharge domestic transport
+R009,UK,USA,Freight,per_kg,12.50,250.00,GBP,TRUE,2024-01-01,,Air freight LHR to USA
+R010,UK,USA,War Risk,percentage,0.15,25.00,GBP,TRUE,2024-01-01,,War risk insurance premium USA
+R011,UK,USA,Customs,fixed,185.00,,GBP,TRUE,2024-01-01,,US customs clearance and documentation
+R012,UK,UAE,Freight,per_kg,14.00,300.00,GBP,TRUE,2024-01-01,,Air freight LHR to UAE (DXB/AUH)
+R013,UK,UAE,War Risk,percentage,0.25,35.00,GBP,TRUE,2024-01-01,,War risk insurance premium UAE (elevated)
+R014,UK,UAE,Customs,fixed,220.00,,GBP,TRUE,2024-01-01,,UAE customs clearance and documentation
+R015,UK,UAE,Crew,fixed,350.00,,GBP,TRUE,2024-01-01,,Armed escort crew charge UAE route
+R016,UK,Switzerland,Freight,per_kg,8.50,200.00,GBP,TRUE,2024-01-01,,Air freight LHR to Switzerland (ZRH/GVA)
+R017,UK,Switzerland,War Risk,percentage,0.05,15.00,GBP,TRUE,2024-01-01,,War risk premium Switzerland (low risk)
+R018,UK,Switzerland,Customs,fixed,150.00,,GBP,TRUE,2024-01-01,,Swiss customs and carnet documentation
+R019,UK,Hong Kong,Freight,per_kg,13.50,280.00,GBP,TRUE,2024-01-01,,Air freight LHR to Hong Kong
+R020,UK,Hong Kong,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Hong Kong
+R021,UK,Hong Kong,Customs,fixed,195.00,,GBP,TRUE,2024-01-01,,HK customs clearance
+R022,UK,Singapore,Freight,per_kg,13.00,270.00,GBP,TRUE,2024-01-01,,Air freight LHR to Singapore
+R023,UK,Singapore,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Singapore
+R024,UK,Singapore,Customs,fixed,175.00,,GBP,TRUE,2024-01-01,,Singapore customs clearance
+R025,UK,Japan,Freight,per_kg,14.50,300.00,GBP,TRUE,2024-01-01,,Air freight LHR to Japan (NRT/KIX)
+R026,UK,Japan,War Risk,percentage,0.08,20.00,GBP,TRUE,2024-01-01,,War risk premium Japan
+R027,UK,Japan,Customs,fixed,210.00,,GBP,TRUE,2024-01-01,,Japanese customs clearance
+R028,France,*,Liability,percentage,0.50,60.00,GBP,TRUE,2024-01-01,,Standard liability cover 0.5% of declared value
+R029,France,*,Airline Handling,fixed,110.00,,GBP,TRUE,2024-01-01,,CDG airline handling and acceptance charge
+R030,France,*,Airport Security,fixed,75.00,,GBP,TRUE,2024-01-01,,CDG security screening fee
+R031,France,*,Vault Fees,fixed,140.00,,GBP,TRUE,2024-01-01,,Overnight secure vault storage at CDG
+R032,France,*,X-ray,fixed,50.00,,GBP,TRUE,2024-01-01,,X-ray screening at CDG
+R033,France,*,Domestic Pickup,fixed,145.00,,GBP,TRUE,2024-01-01,,Paris area armoured collection
+R034,France,*,Vehicle,fixed,185.00,,GBP,TRUE,2024-01-01,,Armoured vehicle domestic leg France
+R035,France,*,Fuel,fixed,60.00,,GBP,TRUE,2024-01-01,,Fuel surcharge domestic transport France
+R036,France,USA,Freight,per_kg,13.00,275.00,GBP,TRUE,2024-01-01,,Air freight CDG to USA
+R037,France,USA,War Risk,percentage,0.15,25.00,GBP,TRUE,2024-01-01,,War risk premium USA
+R038,France,USA,Customs,fixed,185.00,,GBP,TRUE,2024-01-01,,US customs clearance and documentation
+R039,France,UAE,Freight,per_kg,14.50,310.00,GBP,TRUE,2024-01-01,,Air freight CDG to UAE
+R040,France,UAE,War Risk,percentage,0.25,35.00,GBP,TRUE,2024-01-01,,War risk premium UAE (elevated)
+R041,France,UAE,Customs,fixed,220.00,,GBP,TRUE,2024-01-01,,UAE customs clearance
+R042,France,UAE,Crew,fixed,350.00,,GBP,TRUE,2024-01-01,,Armed escort crew charge UAE route
+R043,France,Switzerland,Freight,per_kg,7.50,175.00,GBP,TRUE,2024-01-01,,Air freight CDG to Switzerland
+R044,France,Switzerland,War Risk,percentage,0.05,15.00,GBP,TRUE,2024-01-01,,War risk premium Switzerland
+R045,France,Switzerland,Customs,fixed,140.00,,GBP,TRUE,2024-01-01,,Swiss customs and carnet documentation
+R046,France,Hong Kong,Freight,per_kg,13.50,280.00,GBP,TRUE,2024-01-01,,Air freight CDG to Hong Kong
+R047,France,Hong Kong,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Hong Kong
+R048,France,Hong Kong,Customs,fixed,195.00,,GBP,TRUE,2024-01-01,,HK customs clearance
+R049,France,Singapore,Freight,per_kg,13.50,270.00,GBP,TRUE,2024-01-01,,Air freight CDG to Singapore
+R050,France,Singapore,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Singapore
+R051,France,Singapore,Customs,fixed,180.00,,GBP,TRUE,2024-01-01,,Singapore customs clearance
+R052,France,Japan,Freight,per_kg,15.00,310.00,GBP,TRUE,2024-01-01,,Air freight CDG to Japan
+R053,France,Japan,War Risk,percentage,0.08,20.00,GBP,TRUE,2024-01-01,,War risk premium Japan
+R054,France,Japan,Customs,fixed,215.00,,GBP,TRUE,2024-01-01,,Japanese customs clearance
+R055,Ireland,*,Liability,percentage,0.50,50.00,GBP,TRUE,2024-01-01,,Standard liability cover 0.5% of declared value
+R056,Ireland,*,Airline Handling,fixed,85.00,,GBP,TRUE,2024-01-01,,DUB airline handling and acceptance charge
+R057,Ireland,*,Airport Security,fixed,55.00,,GBP,TRUE,2024-01-01,,DUB security screening fee
+R058,Ireland,*,Vault Fees,fixed,100.00,,GBP,TRUE,2024-01-01,,Overnight secure vault storage at DUB
+R059,Ireland,*,X-ray,fixed,40.00,,GBP,TRUE,2024-01-01,,X-ray screening at DUB
+R060,Ireland,*,Domestic Pickup,fixed,110.00,,GBP,TRUE,2024-01-01,,Dublin area armoured collection
+R061,Ireland,*,Vehicle,fixed,155.00,,GBP,TRUE,2024-01-01,,Armoured vehicle domestic leg Ireland
+R062,Ireland,*,Fuel,fixed,48.00,,GBP,TRUE,2024-01-01,,Fuel surcharge domestic transport Ireland
+R063,Ireland,USA,Freight,per_kg,12.00,250.00,GBP,TRUE,2024-01-01,,Air freight DUB to USA
+R064,Ireland,USA,War Risk,percentage,0.15,25.00,GBP,TRUE,2024-01-01,,War risk premium USA
+R065,Ireland,USA,Customs,fixed,185.00,,GBP,TRUE,2024-01-01,,US customs clearance and documentation
+R066,Ireland,UAE,Freight,per_kg,14.50,300.00,GBP,TRUE,2024-01-01,,Air freight DUB to UAE
+R067,Ireland,UAE,War Risk,percentage,0.25,35.00,GBP,TRUE,2024-01-01,,War risk premium UAE (elevated)
+R068,Ireland,UAE,Customs,fixed,220.00,,GBP,TRUE,2024-01-01,,UAE customs clearance
+R069,Ireland,UAE,Crew,fixed,350.00,,GBP,TRUE,2024-01-01,,Armed escort crew charge UAE route
+R070,Ireland,Switzerland,Freight,per_kg,9.00,200.00,GBP,TRUE,2024-01-01,,Air freight DUB to Switzerland
+R071,Ireland,Switzerland,War Risk,percentage,0.05,15.00,GBP,TRUE,2024-01-01,,War risk premium Switzerland
+R072,Ireland,Switzerland,Customs,fixed,150.00,,GBP,TRUE,2024-01-01,,Swiss customs clearance
+R073,Ireland,Hong Kong,Freight,per_kg,14.00,285.00,GBP,TRUE,2024-01-01,,Air freight DUB to Hong Kong
+R074,Ireland,Hong Kong,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Hong Kong
+R075,Ireland,Hong Kong,Customs,fixed,195.00,,GBP,TRUE,2024-01-01,,HK customs clearance
+R076,Ireland,Singapore,Freight,per_kg,13.50,275.00,GBP,TRUE,2024-01-01,,Air freight DUB to Singapore
+R077,Ireland,Singapore,War Risk,percentage,0.10,20.00,GBP,TRUE,2024-01-01,,War risk premium Singapore
+R078,Ireland,Singapore,Customs,fixed,178.00,,GBP,TRUE,2024-01-01,,Singapore customs clearance
+R079,Ireland,Japan,Freight,per_kg,15.00,305.00,GBP,TRUE,2024-01-01,,Air freight DUB to Japan
+R080,Ireland,Japan,War Risk,percentage,0.08,20.00,GBP,TRUE,2024-01-01,,War risk premium Japan
+R081,Ireland,Japan,Customs,fixed,210.00,,GBP,TRUE,2024-01-01,,Japanese customs clearance
