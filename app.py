@@ -48,41 +48,7 @@ except Exception as e:
     st.error(f"Unexpected error loading cost rules: {e}")
     st.stop()
 
-# ── Currency selector ─────────────────────────────────────────────────────────
-
-curr_col, rate_col, _ = st.columns([1, 1, 2])
-
-with curr_col:
-    currency = st.selectbox(
-        "Display Currency",
-        options=["GBP (£)", "EUR (€)"],
-        help="All rates are stored in GBP. EUR is converted at the rate you enter.",
-    )
-
-use_eur = currency == "EUR (€)"
-
-with rate_col:
-    fx_rate = st.number_input(
-        "GBP → EUR Rate",
-        min_value=0.01,
-        value=1.17,
-        step=0.01,
-        format="%.4f",
-        disabled=not use_eur,
-        help="Enter today's GBP to EUR exchange rate. Only used when EUR is selected.",
-    )
-
-# Helper: format a GBP value into the selected display currency
-def fmt_currency(gbp_amount: float) -> str:
-    if use_eur:
-        return f"€{gbp_amount * fx_rate:,.2f}"
-    return f"£{gbp_amount:,.2f}"
-
-symbol = "€" if use_eur else "£"
-
-st.divider()
-
-# ── Input section ─────────────────────────────────────────────────────────────
+# ── Input section (origin first, so currency can default from it) ─────────────
 
 st.subheader("Shipment Details")
 
@@ -105,12 +71,12 @@ with col1:
 
 with col2:
     shipment_value = st.number_input(
-        f"Declared Shipment Value ({symbol})",
+        "Declared Shipment Value",
         min_value=0.0,
         value=0.0,
         step=1000.0,
         format="%.2f",
-        help=f"The full declared value of the shipment in {symbol}.",
+        help="The full declared value of the shipment.",
     )
 
     shipment_weight = st.number_input(
@@ -121,6 +87,45 @@ with col2:
         format="%.2f",
         help="Total gross weight of the shipment in kilograms.",
     )
+
+st.divider()
+
+# ── Currency selector — defaults based on origin ──────────────────────────────
+
+# France defaults to EUR, UK and Ireland default to GBP
+default_currency = "EUR (€)" if origin == "France" else "GBP (£)"
+default_index = 1 if default_currency == "EUR (€)" else 0
+
+curr_col, rate_col, _ = st.columns([1, 1, 2])
+
+with curr_col:
+    currency = st.selectbox(
+        "Display Currency",
+        options=["GBP (£)", "EUR (€)"],
+        index=default_index,
+        help="Defaults to EUR for France, GBP for UK and Ireland. You can switch manually.",
+    )
+
+use_eur = currency == "EUR (€)"
+
+with rate_col:
+    fx_rate = st.number_input(
+        "GBP → EUR Rate",
+        min_value=0.01,
+        value=1.17,
+        step=0.01,
+        format="%.4f",
+        disabled=not use_eur,
+        help="Enter today's GBP to EUR exchange rate. Only used when EUR is selected.",
+    )
+
+# Helper: format a GBP value into the selected display currency
+def fmt_currency(gbp_amount: float) -> str:
+    if use_eur:
+        return f"€{gbp_amount * fx_rate:,.2f}"
+    return f"£{gbp_amount:,.2f}"
+
+symbol = "€" if use_eur else "£"
 
 st.divider()
 
